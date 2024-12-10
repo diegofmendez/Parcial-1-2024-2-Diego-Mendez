@@ -3,51 +3,51 @@ package ejemplo1;
 import java.util.Scanner;
 
 //Author: Nestor German Bolivar, Diego Francisco Mendez
-//Abstract: This code is a very simplified version of a bank software
+//Abstract: This code is a simulator of the different operations related to 
+//restaurants.
  
 public class Ejemplo1 {
     
     public static void main(String[] args) {
+        Alimento pizza = new Alimento(1,0,100,"Pizza hawaiana","Deliciosa pizza con jamon y piña en almibar");
+        Alimento hotdog = new Alimento(2,0,50,"Perro caliente","Delicioso alimento a base de caninos reales");
+        Alimento arepcho = new Alimento(3,0,100,"Arepa con chorizo","Arepa con un chorizo");
+        Alimento caviar = new Alimento(4,0,112358,"Caviar","Animal indeterminado");
         
-        Cliente cliente = Ejemplo1.registro();
-        Cuenta cuenta = new Cuenta(cliente);
-        Ejemplo1.menu(cuenta, cliente);
+        Ejemplo1.menuUsuario();
         
-    }   
-    public static Cliente registro(){
-        Scanner s = new Scanner(System.in);
-        System.out.println("Creación de cuenta nueva:");
-        System.out.println("Ingresa tu nombre completo");
-        String nombre = s.nextLine();
-        System.out.println("Ingresa tu numero de cedula");
-        int cedula = Integer.parseInt(s.nextLine());
-        return new Cliente(nombre, cedula);
-        }
+    }
     
-    public static void menu(Cuenta cuenta, Cliente cliente){
+    public static void menuUsuario(){
         Scanner s = new Scanner(System.in);
         boolean check = true;
-        System.out.println("Bienvenido");
-        while (check == true) {                
-            System.out.println("Elije una opción");
-            System.out.println("1: Mostrar saldo");
-            System.out.println("2: Hacer una consignación");
-            System.out.println("3: Retirar saldo");
+        System.out.println("¡Bienvenido a Pizzas El Dorado");
+        while (check == true) {
+            System.out.println("Ingrese un número para elegir una opción");
+            System.out.println("(Si ingresa un valor distinto a un número entero el sistema entrará en error)");
+            System.out.println("1: Mostrar menu");
+            System.out.println("2: Hacer un pedido");
+            System.out.println("3: Ver pedido");
             System.out.println("Cualquier otro número: Salir");
             int index = Integer.parseInt(s.nextLine());
-            if (index==1){
-                System.out.println(cliente.getNombre());
-                System.out.println("Saldo actual: "+cuenta.getSaldo());
-            } else if(index==2){
-                System.out.println("Ingrese monto a consignar(Decimales con punto)");
-                cuenta.consignacion(Double.parseDouble(s.nextLine()));
-                
-            } else if(index==3){
-                System.out.println("Ingrese monto a retirar(Decimales con punto)");
-                cuenta.retiro(Double.parseDouble(s.nextLine()));
-            } else{
-                check=false;
+            switch(index){
+                case 1:
+                    System.out.println("1");
+                    break;
+
+                default:
+                    Ejemplo1.seleccionar();
+                    check=false;
             }
         }
     }
+    
+    
+    
+    
+    public static void seleccionar(){
+        System.out.println("Hola");
+        
+    }
 }
+//return Integer.parseInt(s.nextLine());
