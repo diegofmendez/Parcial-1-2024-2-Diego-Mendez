@@ -72,22 +72,27 @@ public class Ejemplo1 {
         System.out.println("4: Caviar sencillo");
         switch(Integer.parseInt(s.nextLine())){
                 case 1:
+                    System.out.println("Recuerde que no añade más unidades sino que determina cuantas va a pedir");
                     System.out.println("¿Cuantas unidades?");
                     alimento1.setCantidad(Integer.parseInt(s.nextLine()));
                     break;
                 case 2:
+                    System.out.println("Recuerde que no añade más unidades sino que determina cuantas va a pedir");
                     System.out.println("¿Cuantas unidades?");
                     alimento2.setCantidad(Integer.parseInt(s.nextLine()));
                     break;
                 case 3:
+                    System.out.println("Recuerde que no añade más unidades sino que determina cuantas va a pedir");
                     System.out.println("¿Cuantas unidades?");
                     alimento3.setCantidad(Integer.parseInt(s.nextLine()));
                     break;
                 case 4:
+                    System.out.println("Recuerde que no añade más unidades sino que determina cuantas va a pedir");
                     System.out.println("¿Cuantas unidades?");
                     alimento4.setCantidad(Integer.parseInt(s.nextLine()));
                     break;
                 default:
+                    System.out.println("Recuerde que no añade más unidades sino que determina cuantas va a pedir");
                     System.out.println("No existe");
                     break;
             }
